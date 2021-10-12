@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-amber.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  </head>
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">To begin, Enter a ticker code and press Go...</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only"></nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">THE BEST STOCK DEALER</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="main.html">Main Page</a>
+          <a class="mdl-navigation__link" href="predictions.html">Predictions</a>
+          <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+          <!--<a class="mdl-navigation__link" href="">Hariel</a> -->
+        </nav>
+      </div>
+      <main class="mdl-layout__content" style="overflow: hidden">
+        <div class="page-content">
+          <!-- Stuff here -->
+          <div class="mdl-grid">
+            <div id="canvasHolder" class="mdl-cell mdl-cell--8-col" style = "height: 928px; width: 883px; padding: 8px">
+                <!-- Image card -->
+                <canvas id="myChart" style="width:1px"></canvas>
+                <style></style>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col" id="myItemList">
+              <div class="mdl-grid mdl-grid--nesting" style="width:100%;padding-left:8px">
+                <div class="mdl-cell mdl-cell--12-col">
+                  <table style="width:100%;height: 100%;padding: 8px">
+                    <tr>
+                      <th style="text-align: left">
+                        <label >Choose a Stock:</label>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <!-- Textfield with Floating Label -->
+                        <form action="#">
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="sample3">
+                            <label class="mdl-textfield__label" for="sample3">Ticker Code</label>
+                          </div>
+                        </form>
+                      </td>
+                      <td style="text-align:left;padding-right:20px">
+                        <!-- Accent-colored raised button -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="buttonClickGo();" style="position: relative; left: 10%"> Go </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                        <span class="mdl-radio__label">1 Min</span>
+                      </label>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                        <span class="mdl-radio__label">15 Min</span>
+                      </label>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                        <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+                        <span class="mdl-radio__label">60 Min</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                        <input type="radio" id="option-4" class="mdl-radio__button" name="options1" value="1" checked>
+                        <span class="mdl-radio__label">Stock 1</span>
+                      </label>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="options1" value="2">
+                        <span class="mdl-radio__label">Stock 2</span>
+                      </label>
+                    </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col" style="padding: 8px">
+                  <h6 style="margin-top: 8px;margin-bottom: 4px;">Stock Statistics</h6>
+                  <hr style="margin-bottom: 8px;">
+                  <div id="stats" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats2" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats3" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats4" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats5" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats6" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats7" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats8" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats9" style="display: flex">
+                  </div>
+                  <hr style="margin-bottom: 4px;margin-top: 4px;">
+                  <div id="stats10" style="display: flex">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+  </body>
+</html>

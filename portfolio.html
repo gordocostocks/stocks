@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-amber.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  </head>
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Portfolio</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only"></nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Gordo & Co</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="main.html">Main Page</a>
+          <a class="mdl-navigation__link" href="predictions.html">Predictions</a>
+          <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+          <!--<a class="mdl-navigation__link" href="">Hariel</a> -->
+        </nav>
+      </div>
+      <main class="mdl-layout__content" style="overflow: hidden">
+        <div class="page-content">
+          <div class="mdl-grid" style="height:944px">
+            <div class="mdl-cell mdl-cell--12-col">
+          <!-- Stuff here -->
+          <table class="portTable" style="max-width:1302px;width:100%;height:896px;margin:16px;position:absolute">
+            <col style="width:14%">
+          	<col style="width:18%">
+          	<col style="width:18%">
+            <col style="width:16%">
+            <col style="width:24.5%">
+            <col style="width:8.5%">
+            <thead>
+            <tr>
+              <th>
+                Stock
+              </th>
+              <th>
+                Quantity
+              </th>
+              <th>
+                Buy Price
+              </th>
+              <th>
+                Current Price
+              </th>
+              <th>
+                Profit
+              </th>
+              <th>
+                Edit
+              </th>
+            </tr>
+          <tr>
+            <td style="border:0px;background:#eee"><br></td>
+          </tr>
+          </thead>
+          <tbody id="bodyReference">
+          </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+      </main>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="portfolio.js"></script>
+  </body>
+</html>

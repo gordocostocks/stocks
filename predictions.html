@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-amber.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    function val() {
+        d = document.getElementById("stats").value;
+        alert(d);
+    }
+    </script>
+
+  </head>
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">To begin, Enter a ticker code and press Go...</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only"></nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">THE BEST STOCK DEALER</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="main.html">Main Page</a>
+          <a class="mdl-navigation__link" href="predictions.html">Predictions</a>
+          <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content" style="overflow: hidden">
+        <div class="page-content">
+          <!-- Stuff here -->
+          <div class="mdl-grid" style="height:944px">
+            <div class="mdl-cell mdl-cell--12-col" id="myItemList" style="height:85px">
+              <div class="mdl-grid mdl-grid--nesting" style="width:100%;padding-left:8px;height:85px">
+                <div class="mdl-cell mdl-cell--12-col" style="height:68px">
+                  <table style="width:100%">
+                    <tr>
+                      <td>
+                        <h6 style="margin-left: 16px">Choose a stock: <h6>
+                      </td>
+                      <td>
+                        <!-- Textfield with Floating Label -->
+                        <form action="#">
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="sample3">
+                            <label class="mdl-textfield__label" for="sample3">Ticker Code</label>
+                          </div>
+                        </form>
+                      </td>
+                      <td style="text-align:left;padding-right:20px">
+                        <!-- Accent-colored raised button -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="buttonClickGo();" style="position: relative; left: 10%"> Predict </button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col" style="height:826px">
+              <div class="mdl-grid mdl-grid--nesting" style="width:100%;padding-left:8px">
+                <div class="mdl-cell mdl-cell--12-col" style="height:810px">
+                  <table style="width:100%">
+                    <tr>
+                      <td>
+                        <!-- Image card -->
+                        <div style="height:810px">
+                        <canvas id="myChart"></canvas>
+                        <style></style>
+                      </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="predictions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+
+#stockList{
+    width: 100%;
+    height: 10%;
+}
+
+.mdl-grid .mdl-grid.mdl-grid--nesting {
+  padding: 0;
+  margin: 0 -8px;
+}
+
+.mdl-grid {
+  max-width: 1366px;
+  max-height: 944px;
+  width: 1350px;
+  height: 928px;
+}
+
+.mdl-cell {
+  background: #eee;
+  max-height: 100%;
+  max-width: 100%;
+}
+.mdl-cell .mdl-cell {
+  background: #f8f8f8;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.portTable tr td {
+  border: 1px solid #616161;
+}
+
+.portTable thead tr th {
+  height: 64px;
+  border: 1px solid #616161;
+}
+
+.portTable {
+  border-spacing: 0px;
+  margin-bottom: 16px;
+}
+
+.portTable tr {
+  background: #f8f8f8;
+}
+
+.portTable tbody tr th {
+  border: 1px solid #616161;
+}
+
+.portTable tbody tr th h6 {
+  font-weight: bold;
+}
+
+.mdl-spinner {
+  width: 500px;
+  height: 500px;
+  
+}
+
+.mdl-spinner__circle {
+  border-width: 40px;
+}
